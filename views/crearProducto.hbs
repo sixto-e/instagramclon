@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+                <!--ruta del app.js -->
+        <form action="/productos/create" method="post"  class="form-group"
+        enctype="multipart/form-data">
+
+            <input type="file" placeholder="imagen"  id= "imagen" name="imagen">
+
+            <label for="nombre">nombre del producto: </label>
+            <input class="form-control" type="text" name="nombre" placeholder="nombre">
+
+            <label for="descripcion">descripcion del producto: </label>
+            <input class="form-control" type="text" name="descripcion" placeholder="descripcion">
+
+            <label for="precio">precio del producto: </label>
+            <input class="form-control" type="number" name="precio" placeholder="precio">
+
+            <button  class="btn btn-success mt-5" type="submit">cargar producto</button>
+        </form>
+    </div>
+</div>
