@@ -3,13 +3,174 @@
   margin: 0;
   box-sizing: border-box;
 }
+body{
+  background-color: #f2f2f2;
+}
+ 
+ .PatherContenedor{
+  padding-top: 20px;
+  padding-bottom: 40px;
+   width: 100vw;
+   height: 100%;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-color: #f2f2f2;
 
+ }
 
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+ /**username**/
+.username{
+  font-size: 30px;
+  font-weight:  600;
+  font-family: 'Raleway', sans-serif;
+}
+.datos1{
+  font-size: 20px;
+  font-weight:700;
+  font-family: 'Raleway', sans-serif;
+}
+.datos{
+  margin-top: 0;
+  font-size: 15px;  
+  font-weight: 600;
+  font-family: 'Raleway', sans-serif;
 }
 
-a {
-  color: #00B7FF;
+/**INFORMACION DEL USUARIO**/
+.infoContenedor{
+   margin-left: 40px;
+   
+    
+ }
+
+
+/*mi foto de perfil*/
+.tarjeta1{
+width: 200px;
+height: 200px;
+display:inline-block;
+flex-direction: row;
+ 
+}
+
+.tarjeta {
+    width: 170px;
+    height: 170px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+   
+}
+
+/*CONTENEDOR DE TODO(FOTO PERFIL Y DATOS)*/
+.contenedorTodo{
+  position: relative;
+ background-color: #f2f2f2;
+  width: 60%;
+  height: 40%;
+  margin: auto;
+  display: flex;
+ 
+}
+
+/*CAMBIAR FOTO*/
+.cambiarFoto{
+  position: absolute;
+  bottom: -15px;
+  margin-left: 40px;
+ 
+  display: inline-block;
+  width: 90px;
+  height: 30px;
+}
+/*boton para editar*/
+.editarBoton{
+  display: inline-block;
+  height: 30px;
+  padding: 4px;
+  text-decoration: none;
+  color: #000;
+  margin-left: 15px;
+  border: .5px solid rgb(222, 213, 213);
+}
+
+/*CONTENEDOR DE PUBLICACIONES*/
+.publicaciones{
+  width: 80%;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+
+  flex-wrap: wrap;
+}
+/*IMAGENES*/
+.card{
+  
+  position: relative;
+  width: 30%;
+  height: 50%;
+  background-size: cover;
+  margin: 0 15px 25px 15px;
+}
+.card__son{
+  color: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.imagenes1{
+  object-position: top;
+  width: 100%;
+  height: 100%;
+ 
+
+}
+/*DIV PARA POSTEAR*/
+.postear{
+  width: 100vw;
+  height: 50px;
+  border: 1px #ffffff solid ;
+  display: flex;
+  background-color: #ffffff !important;
+
+}
+
+
+/*brand*/
+.brand__1{
+  position: absolute;
+  font-family: 'Rubik Moonrocks', cursive;
+ font-size: 2em;
+  right: 300px;
+}
+
+/*addFoto*/
+.addFoto{
+  position: absolute;
+left: 400px;
+}
+
+/*crear publicacion*/
+
+.contenedor__publicacion{
+  width: 40%;
+  height: 40%;
+  padding: 10px;
+  margin: auto;
+  border-radius: 10px;
+  border: 1px steelblue solid;
+  display: flex;
+  flex-direction: column;
+}
+.crearPublicacion{
+display: flex;
+justify-content: center;
+font-weight: 500;
+
+}
+
+.boton{
+  margin-top: 10px;
+  display: block;
+   
 }

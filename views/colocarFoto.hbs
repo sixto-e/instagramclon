@@ -1,0 +1,16 @@
+<div class="contenedor__publicacion">
+
+<div class="crearPublicacion">
+  <p class="crearTexto"> colocar foto de perfil</p>
+ 
+</div>
+{{#each idImg}}
+<form class="form-group" action="/crearPublicacion/fotoPerfil/{{id}}/create"method="post" enctype="multipart/form-data">
+  
+  <input class="btn btn-primary"  type="file" name="avatar" > 
+  
+  <button  class="btn btn-primary boton" type="submit">listo</button>
+</form>
+{{/each}}
+
+</div>

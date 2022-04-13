@@ -1,0 +1,13 @@
+cambiar foto - T_USUARIOS_IMAGENES:
+cambiaba la foto y esa foto se ponia para todos los usuarios.
+por que?
+porque se pisaba el id_usuario. por ej: si yo tenia un id_usuario 18 y habia otro con id_usuario 19
+y yo (usuario con id_usuario 18) cambiaba mi foto de perfil, lo lograba pero la misma foto se ponia
+para el usuario con id_usuario 19.
+por que?
+porque yo hacia mal la consulta sql. decia que la foto se actualice para el id_usuario 18 cuando en 
+realidad lo que tenia que hacer era decir que la foto se actualice pero donde el "ID DE LA IMAGEN"
+SEA 12 por ejemplo. si hago un update tengo que hacer uso de "la clave primaria" no de la "clave 
+foranea".
+
+El mismo problema tengo con editar perfil (datos).

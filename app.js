@@ -3,11 +3,15 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var session = require('express-session');//antes de las rutas, para que las afecte.
+var {veryUser} = require('./middlewares/auth')
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-const productosRouter = require('./routes/Products');
-
+const singUpRouter = require('./routes/sing-up');
+const loginRouter = require('./routes/login');
+const myPerfilRouter = require('./routes/myPerfil');
+const crearPublicacionRouter = require('./routes/crearPublicacion')
 var app = express();
 
 // view engine setup
@@ -19,11 +23,21 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(session({
+  secret:'pass secreto',
+  cookie:{maxAge:null},
+  resave:true,
+  saveUninitialized:false
+}));
+
+
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/productos', productosRouter);
-
+app.use('/sing-up', singUpRouter);
+app.use('/login', loginRouter);
+app.use('/Perfil', veryUser, myPerfilRouter);
+app.use('/crearPublicacion', crearPublicacionRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

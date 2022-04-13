@@ -1,0 +1,84 @@
+ <!-- <details><ul><li>node js</li> <li>mysql</li> <li>xampp</li> </ul>
+  <progress value="100" max="100"></progress></details> 
+    <select name="select" >
+  <option value="value1">Value 1</option>
+  <option value="value2" selected>Value 2</option>
+  <option value="value3">Value 3</option>
+</select>--> 
+ 
+    <div class="postear">
+        
+        <div class="addFoto">
+        <a href="/crearPublicacion"><i style="color: #000000;" class='bx bxs-image-add bx-md'></i></a>
+        </div>
+        <div class="brand">
+            <p class="brand__1">W-T-F</p> 
+        </div>
+      
+    </div>
+
+<div class="PatherContenedor">
+
+     <!-- MI FOTO de perfil-->
+    <div class="contenedorTodo">
+        {{#each fotos}}
+        <div class="tarjeta1">
+            <img class="tarjeta" src="/tmp/{{uid}}" alt="NO HAY FOTO">
+        </div> 
+         {{/each}}
+         <div class="cambiarFoto">
+            {{#each idImg}}
+                <a class="changePicrute" style="color: rgb(32, 28, 28);" href="/crearPublicacion/fotoPerfil/{{id}}">cambiar foto</a>
+            {{/each}} 
+         </div>
+
+        <!-- USERNAME-->
+        <div class="infoContenedor">
+            {{#each usuario}}
+            <p class="username">{{username}}</p>
+               {{/each}}
+
+            <!-- DATOS-->
+            {{#each datos}}
+            <p class="datos1">{{sobreNombre}}</p>
+            <p class="datos">{{frase}}</p>
+            {{/each}}
+        </div>
+            {{#each usuario}}    
+                <a  class= "editarBoton" href="/perfil/editar/{{id}}">Editar perfil</a>
+            {{/each}}
+    </div>
+
+
+        <hr>
+
+        <div class="publicaciones"> 
+            
+    
+
+            {{#each publicaciones}}
+                   <div class="card">
+                        <img src="/tmp/{{uid}}" class="imagenes1" alt="couldn't load image">
+                            <div>
+ 
+                                 <details class="card__son" style="border-radius: 3px;  ">
+                                    <summary style="font-weight: 600; font-size:30px;"></summary>
+                                 <a  style="text-decoration:none; font-weight: 600; background-color: #ffff; color:red;  "  href="/perfil/eliminar/{{id}}">Eliminar</a>
+                                    </details>
+                          
+
+                                
+                            </div>
+                    </div>
+            {{/each}}
+           
+
+            
+        </div>
+
+</div>
+
+
+
+ 
+  
